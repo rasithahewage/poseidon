@@ -20,6 +20,7 @@ WORKDIR /app
 
 COPY --from=build /app/poseidon /app/poseidon
 COPY --from=build /app/configuration.example.yaml /app/configuration.example.yaml
+COPY --from=build /app/configuration.yaml /app/configuration.yaml
 
 EXPOSE 7200
 
