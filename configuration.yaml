@@ -1,0 +1,32 @@
+server:
+  address: 0.0.0.0
+  port: 7200
+  systemdsocketactivation: false
+  tls:
+    active: false
+  interactivestderr: true
+  alert:
+    prewarmingpoolthreshold: 0.5
+    prewarmingpoolreloadtimeout: 300
+
+nomad:
+  enabled: true
+  address: nomad
+  port: 4646
+  tls:
+    active: false
+  disableforcepull: true
+  network:
+    mode: "bridge"
+
+aws:
+  enabled: false
+
+logger:
+  level: INFO
+
+profiling:
+  cpuenabled: false
+  cpufile: cmd/poseidon/default.pgo
+  memoryinterval: 30_000
+  memorythreshold: 1_000
